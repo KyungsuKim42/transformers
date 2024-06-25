@@ -574,6 +574,10 @@ _import_structure = {
         "MusicgenConfig",
         "MusicgenDecoderConfig",
     ],
+    "models.tokensynth": [
+        "TokenSynthConfig",
+        "TokenSynthDecoderConfig",
+    ],
     "models.musicgen_melody": [
         "MusicgenMelodyConfig",
         "MusicgenMelodyDecoderConfig",
@@ -2664,6 +2668,15 @@ else:
             "MusicgenModel",
             "MusicgenPreTrainedModel",
             "MusicgenProcessor",
+        ]
+    )
+    _import_structure["models.tokensynth"].extend(
+        [
+            "TokenSynthForCausalLM",
+            "TokenSynthForConditionalGeneration",
+            "TokenSynthModel",
+            "TokenSynthPreTrainedModel",
+            "TokenSynthProcessor",
         ]
     )
     _import_structure["models.musicgen_melody"].extend(
@@ -5204,6 +5217,10 @@ if TYPE_CHECKING:
         MusicgenConfig,
         MusicgenDecoderConfig,
     )
+    from .models.tokensynth import (
+        TokenSynthConfig,
+        TokenSynthDecoderConfig,
+    )
     from .models.musicgen_melody import (
         MusicgenMelodyConfig,
         MusicgenMelodyDecoderConfig,
@@ -7059,6 +7076,13 @@ if TYPE_CHECKING:
             MusicgenModel,
             MusicgenPreTrainedModel,
             MusicgenProcessor,
+        )
+        from .models.tokensynth import (
+            TokenSynthForCausalLM,
+            TokenSynthForConditionalGeneration,
+            TokenSynthModel,
+            TokenSynthPreTrainedModel,
+            TokenSynthProcessor,
         )
         from .models.musicgen_melody import (
             MusicgenMelodyForCausalLM,

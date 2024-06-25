@@ -153,6 +153,7 @@ from . import (
     mra,
     mt5,
     musicgen,
+    tokensynth,
     musicgen_melody,
     mvp,
     nllb,
